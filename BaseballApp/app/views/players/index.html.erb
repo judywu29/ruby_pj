@@ -1,0 +1,24 @@
+<% content_for :head do %>
+ <script type="text/javascript">
+  <%= render 'players/alert_random_player.js' %>
+ </script>
+<% end %>
+
+<% @players.each do |player| %>
+<table>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>Batting Average</td>
+		</tr>
+		<tr>
+			<td><%= player.name %></td>
+			<td><%= player.batting_average %></td>
+		</tr>
+	</tbody>
+</table>
+
+<% end %>	
+
+<%= content_tag :div, class: "players_class", data: {players: @players } do %>
+<% end %>		

@@ -1,0 +1,4 @@
+load "ad_performance_aug.csv"
+get "Highest", "Impressions", "Clicks", "Converted clicks", "Converted clicks/Clicks"
+get "Lowest", "Cost", "Cost / converted click"
+output "html", "Campaign ID", "Final URL", "Day"

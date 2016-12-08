@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*div{*/
+            /*text-shadow: -5px -10px 2px yellow, 5px 5px 2px yellow, 10px 10px 2px yellow;*/
+            /*color:white;*/
+            /*font-size: 40px;*/
+            /*font-weight: bold;*/
+            /*font-family: sans-serif;*/
+            /*background-image: url("images/2.jpg");*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*padding: 30px 0px;*/
+            /*text-align: center;*/
+        /*}*/
+            /*define a font on the server*/
+            /*@font-face {*/
+                /*font-family: WebFont;*/
+                /*/!*ttf :t otf :o(opentype)*!/*/
+                /*src:url('') format("truetype");/!*the font path on the server and use ttf*!/*/
+                /*font-weight: bold;*/
+            /*}*/
+        /*div{*/
+            /*font-family: WebFont;/!*use the font*!/*/
+        /*}*/
+
+        /*@font-face {*/
+            /*font-family: Arial;*/
+            /*src:local("Arial"), url(''); /!*if there's the font in the client, use client font, or else use the font on the server*!/*/
+        /*}*/
+        /*div{*/
+            /*font-family: Arial;*/
+        /*}*/
+
+        /*font-size-adjust: x-height (58px)* x-font-size(100px), aspect:0.58)*/
+        /* aspect: IE: C= (a/b)*S a:*/
+#div1{
+    font-family: cursive;
+    font-size:16px;
+    font-size-adjust: 0.58;
+}
+        #div2{
+            font-family: fantasy;
+            font-size:16px;
+            font-size-adjust: 0.6;
+        }
+        #div3{
+            font-family: monospace;
+            font-size:16px;
+            font-size-adjust: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+<!--<div>Hello</div>-->
+<!--word-break: normal, keep-all, break-all(middle of word)-->
+<div id="div1">
+    This is font test.
+</div>
+<div id="div2">
+    This is font test.
+</div>
+<div id="div3">
+    This is font test.
+</div>
+</body>
+</html>

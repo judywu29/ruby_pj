@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<style>-->
+        <!--#divid{-->
+           <!--width:200px;-->
+            <!--height:200px;-->
+            <!--background-color: aqua;-->
+        <!--}-->
+    <!--</style>-->
+</head>
+<!--<body onload="alert('it has been loaded.')">-->
+<!--<body onload="showtime()">-->
+<!--<body onload="timeout()">-->
+<body>
+<!--<p name="pname">Hello</p>-->
+<!--<p name="pname">Hello</p>-->
+<!--<a id="aid" title="titleofa">change attr</a>-->
+<!--<ul><li>1</li><li>2</li></ul>-->
+<!--<div id="divid" onmouseout="onOut(this)" onmouseover="onOver(this)">-->
+    <!--<p id="pid">elment p</p>-->
+<!--</div>-->
+<!--<button id="bid" onclick="openwindow()">Click</button>-->
+<div id="divid">
+    <!--<button id="bid" onclick="openwindow()">Click</button>-->
+    <!--<a id="aid" href="www.google.com">google</a>-->
+</div>
+<!--<form>-->
+    <!--<input type="text" id="username">-->
+    <!--<input type="button" id="btn" value="Click" onclick="save()">-->
+<!--</form>-->
+<button id="btn" onclick="getloc()">Click</button>
+<p id="pid"></p>
+<!--<button id="bid" onclick="goback()">Click</button>-->
+<!--<button id="bid" onclick="stoptimer()">Click</button>-->
+<!--<button id="bid" onclick="stoptimer()">Click</button>-->
+
+<!--<form>-->
+    <!--&lt;!&ndash;<input id="txt" type="text" onchange="alert('it is been changed.')">&ndash;&gt;-->
+    <!--<input id="txt" type="text" onselect="onChangeText(this)" onfocus="onChangeColor(this)">-->
+    <!--<input id="btn" type="button" value="Click" onclick="demo()">-->
+<!--</form>-->
+<script>
+    function getloc(){
+//        document.getElementById("pid").innerHTML = window.location.hostname;
+//        document.getElementById("pid").innerHTML = window.location.pathname;
+//        location.assign("http://www.google.com");//reload to this new webpage
+        document.write(screen.availHeight + "," + screen.availWidth +","+ screen.height+","+ screen.width);
+    }
+//    function save(){
+//        var name = document.getElementById("username").value;
+//        if(name == "hello"){
+//            history.go(-1);
+//        }
+//        else{
+//            alert("input error.");
+//        }
+//    }
+//    function goback(){
+//        history.back();
+//    }
+//    function openwindow(){
+////    window.open("index_js02.html", "window", "height=200, width=200, top=100, left=100, toolbar=yes");
+//        window.close();
+//    }
+//    document.write(window.innerHeight + " " + window.innerWidth);
+//    var a = ["5", "1", "3", "7", "4"];
+//    //descending:
+//    document.write(a.sort(function(a, b){
+//        return b-a;
+//    }));
+//    document.write(a.sort());//acending.
+//
+//    document.write(Math.round(3.456));
+//    document.write(parseInt(Math.random()*100));
+//    function showtime(){
+//        var today = new Date();
+//        var h = today.getHours();
+//        var m = today.getMinutes();
+//        var s = today.getSeconds();
+//        document.getElementById("divid").innerHTML = h + ":" + m + ":" + s;
+////        setTimeout(function(){showtime();}, 1000);
+//    }
+//    var timer = setInterval(function(){
+//        showtime();
+//    }, 2000);
+//    function stoptimer(){
+//    clearInterval(timer);
+//    }
+//
+//     function timeout(){
+//         setTimeout(function(){
+//             alert("hello")
+//         }, 3000);
+//     }
+////keep alerting: calling itself, recursion. different from setInterval who doesn't have to call itself.
+//var mytimer;
+//function timeout(){
+//    alert("hello");
+//    mytimer = setTimeout(function(){
+//       timeout();
+//    }, 3000);
+//}
+//
+//function stoptimer(){
+//    clearTimeout(mytimer);
+//}
+//    people = {name: "judy", age:30};
+//    document.write("name: " + people.name + ", age:" + people.age);
+//    function people(name, age){
+//        this.name = name;
+//        this.age = age;
+//    }
+//    son = new people("judy", 30);
+//    document.write(son.age, son.name);
+
+//    var str = "hello world";
+//    document.write(str.indexOf("world2"));//-1
+
+//var date = new Date();
+//document.write(date.getFullYear());
+//document.write(date.getDate());
+//date.setFullYear(2020, 1, 1);
+//document.write(date);
+//    document.getElementById("bid").addEventListener("click", getType);
+//    document.getElementById("divid").addEventListener("click", showName);
+//    function getType(event){
+////        alert(event.type);
+//        alert(event.target);
+//        event.stopPropagation();
+//    }
+//    function showName(){
+//        alert("div");
+//    }
+//    document.getElementById("aid").addEventListener("click", showA);
+//    function showA(event){
+////        event.stopPropagation();
+//        event.preventDefault();
+//    }
+    //DOM 0level
+//    document.getElementById("bid").onclick = function(){
+//    alert("hello");
+//    };
+//    document.getElementById("bid").onclick = function(){
+//        alert("world");
+//    };
+//    function onOver(ooj){
+//        ooj.innerHTML="Over it";
+//    }
+//    function onOut(ooj){
+//        ooj.innerHTML="Out it";
+//    }
+//    function onChangeText(bj){
+////        alert("it's been changed.");
+//        bj.style.background="red";
+//    }
+//    function onChangeColor(bj){
+//        bj.style.background="blue";
+//    }
+    //DOM 2level event
+
+//    var f = document.getElementById("bid");
+//    if(f.addEventListener){
+//        f.addEventListener("click", function(){
+//            alert("hello");
+//        });
+//        f.addEventListener("click", function(){
+//            alert("World");
+//        });
+//    }
+//    else if(f.attachEvent) {
+//        f.attachEvent("onclick", function () {
+//            alert("hello world")
+//        });
+//    }
+//    else{
+//        f.onclick = demo();//will be replaced by the latest event defined.
+//    }
+
+//    f.addEventListener("click", demo);
+//    f.removeEventListener("click", demo);
+//
+//    function getname(){
+////        var count = document.getElementsByName("pname");
+////        var count = document.getElementsByTagName("p");
+//        alert(count.length);
+//        count[0].innerHTML="World.";
+//    }
+////    getname();
+//    function getattr(){
+//        var a = document.getElementById("aid");
+////        alert(a.getAttribute("title"));
+//        a.setAttribute("title", "titleofa has been set.");
+//        alert(a.getAttribute("title"));
+//    }
+////    getattr();
+//    function getChildNode(){
+//        var childnodes = document.getElementsByTagName("ul")[0].childNodes;
+//        alert(childnodes.length);
+//        alert(childnodes[0].nodeType);
+//
+//
+//    }
+////    getChildNode();
+//    function getParentNode(){
+//        var node = document.getElementById("pid");
+//        alert(node.parentNode.nodeName);
+//    }
+////    getParentNode();
+//
+//    function createnode(){
+//        var  body= document.body;
+//        var input = document.createElement("input");
+//        input.type = "button";
+//        input.value = "submit"
+//        body.appendChild(input);
+//    }
+////    createnode();
+//
+//    function addnode(){
+//        var div = document.getElementById("divid");
+//        var node = document.getElementById("pid");
+//        var newnode = document.createElement("p");
+//        newnode.innerHTML="create a p";
+//        div.insertBefore(newnode, node);
+//    }
+////    addnode();
+//    function removenode(){
+//        var div = document.getElementById("divid");
+//        div.removeChild(div.children[1]);
+//    }
+////    removenode();
+//    function getsize(){
+//        var width = document.body.offsetWidth || document.documentElement.offsetWidth;//offsetHeight;
+//        alert(width);
+//    }
+////    getsize();
+//
+//    function demo(){
+//        document.getElementById("divid").style.background="blue";
+//        try{
+////            alert(str);
+//            if(document.getElementById("txt").value == ""){
+//                throw "Pls type: "
+//            }
+//        }
+//        catch(err){
+//            alert(err);
+//        }
+//    }
+////    demo();
+////  document.getElementById("pid").innerHTML="Hello judy";
+//  var r;//undefined.
+//  var i = 10;
+//  var j = "10"
+//  document.write(i==j);//true,==: don't compare the type, ===: compare
+
+//    document.write("Hello World. ");
+</script>
+
+
+</body>
+</html>

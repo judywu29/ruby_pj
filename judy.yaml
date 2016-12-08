@@ -1,0 +1,7 @@
+--- !ruby/object:A
+number: 1
+string: hello world
+
+--- !ruby/object:A
+number: 2
+string: hello world

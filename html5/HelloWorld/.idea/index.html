@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Basic</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+    <link rel="stylesheet" type="text/css" href="index.css"></link>
+    <!--<link rel="stylesheet/less" type="text/css" href="index.less">-->
+    <!--<script src="less.min.js" type="text/javascript"></script>-->
+    <style>
+        [href="http://www.google."]{
+            font-family: fantasy;
+        }
+        [title~="title"]{
+            font-size: 50px;
+        }
+    </style>
+    <!--<style type="text/css">-->
+        <!--span{-->
+            <!--color:chocolate;-->
+        <!--}-->
+    <!--</style>-->
+    <!--<style type="text/css">-->
+        <!--body{-->
+            <!--margin: 0px; /*full screen.*/-->
+        <!--}-->
+        <!--#container{-->
+            <!--width:100%;-->
+            <!--height: 950px;-->
+            <!--background-color: cornsilk;-->
+        <!--}-->
+        <!--#heading{-->
+            <!--width:100%;-->
+            <!--height: 10%;-->
+            <!--background-color: aqua;-->
+        <!--}-->
+        <!--#content_menu{-->
+            <!--width: 30%;-->
+            <!--height: 80%;-->
+            <!--background-color: darkorange;-->
+            <!--float:left;-->
+        <!--}-->
+        <!--#content_body{-->
+            <!--width:70%;-->
+            <!--height: 80%;-->
+            <!--background-color: aquamarine;-->
+            <!--float: left;-->
+        <!--}-->
+        <!--#footing{-->
+            <!--width:100%;-->
+            <!--height: 10%;-->
+            <!--background-color: darkgray;-->
+            <!--clear:both;/*clear float*/-->
+        <!--}-->
+    <!--</style>-->
+    <style type="text/css">
+        /*[title]{*/
+            /*color:blue;*/
+        /*}*/
+        /*[title=te]{*/
+            /*color:black;*/
+        /*}*/
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        div{
+
+        }
+        .heading{
+            background-color: darkorange;
+            height: 150px;
+        }
+        .content{
+            background-color:aqua;
+            height: 300px;
+
+            overflow: hidden;
+
+            /*padding-left: 150px;*/
+            /*padding-right: 100px;*/
+        }
+        .footing{
+            background-color: black;
+            height: 100px;
+        }
+        .content .left{
+            background-color: cornflowerblue;
+            float: left;    <!--挤到左边，脱离出来了 -->
+            color: white;
+            margin-right: 5px;
+            width: 150px;
+            height:30px;
+            margin-left: -100%;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+            /*position: relative;*/
+            /*left:-150px;*/
+
+        }
+        .content .right{
+            background-color: fuchsia;
+            float: left;
+            width:100px;
+            /*height: 30px;*/
+            margin-left: -100px;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+            /*position: relative;*/
+            /*right: -100px;*/
+        }
+        .content .middle{
+            background-color: crimson;
+            float:left;
+            width: 100%;
+            height: 30px;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+
+        }
+        .inner{
+            margin-left: 150px;
+            margin-right: 100px;
+            background-color: yellow;
+            height: 30px;
+
+        }
+    </style>
+</head>
+<body>
+<!--<div class="top">-->
+    <!--<div class="top_content"></div>-->
+<!--</div>-->
+<!--<div class="bd">-->
+        <!--<div class="body_image"></div>-->
+
+        <!--<div class="body_content">-->
+            <!--<div class="body_message"></div>-->
+        <!--</div>-->
+    <!--<div class="footer">-->
+    <!--<div class="footer_content"></div>-->
+        <!--<div class="footer_menu"></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="position1"></div>-->
+<!--<div class="position2"></div>-->
+<!--<script>-->
+    <!--for(var i=0;i<100;i++){-->
+        <!--document.write(i+"<br/>");-->
+    <!--}-->
+<!--</script>-->
+<!--<div class="container">-->
+    <!--<div class="fd"></div>-->
+    <!--<div class="sd"></div>-->
+    <!--<div class="td"></div>-->
+    <!--<div class="text">Hello</div>-->
+<!--</div>-->
+
+<!--<div id="id1">-->
+    <!--<ul>-->
+        <!--<li><img src="images/1.jpg"> </li>-->
+        <!--<li><img src="images/2.jpg"> </li>-->
+        <!--<li><img src="images/3.jpg"> </li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li><img src="images/4.jpg"> </li>-->
+        <!--<li><img src="images/5.jpg"> </li>-->
+        <!--<li><img src="images/6.jpg"> </li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li><img src="images/7.jpg"> </li>-->
+        <!--<li><img src="images/8.jpg"> </li>-->
+        <!--<li><img src="images/9.jpg"> </li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+<!--<p class="p1">Hello World</p>-->
+<!--<p class="p2">Hello World</p>-->
+<!--<p class="p1 p2">Hello World</p>-->
+<!--<p title="ti">Test style</p>-->
+<!--<p title="title">Test style</p>-->
+<!--<p title="te">Test style</p>-->
+<!--<p title="title hello">Test style</p>-->
+
+<!--<a href="http://www.google.com">click on me. </a>-->
+
+<!--<p>This is my <strong>web <i>Hello</i></strong>page.</p>-->
+<!--<div>-->
+    <!--<ul>-->
+        <!--<li>item1</li>-->
+        <!--<li>item2</li>-->
+        <!--<li>item3</li>-->
+    <!--</ul>-->
+    <!--<ol>-->
+        <!--<li>item11</li>-->
+        <!--<li>item21</li>-->
+        <!--<li>item31</li>-->
+    <!--</ol>-->
+<!--</div>-->
+<!--<div class="div">-->
+
+<!--</div>-->
+<!--<p class="p1">this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page. </p>-->
+<!--<p class="p2">this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page. </p>-->
+<!--<p class="p3">this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page.this is my web page. </p>-->
+<!--<p>HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello</p>-->
+<!--<ul>-->
+    <!--<li>Hello</li>-->
+    <!--<li>Hello</li>-->
+    <!--<li>Hello</li>-->
+    <!--<li>Hello</li>-->
+<!--</ul>-->
+<!--<ul>-->
+    <!--<li><a href="#">navigation1</a></li>-->
+    <!--<li><a href="#">navigation2</a></li>-->
+    <!--<li><a href="#">navigation3</a></li>-->
+    <!--<li><a href="#">navigation4</a></li>-->
+<!--</ul>-->
+
+<!--<div class="div1">before change</div>-->
+<!--<br/>-->
+<!--<div class="div2">after change</div>-->
+
+<!--<div>check the effect</div>-->
+
+<!--<div>animation</div>-->
+
+<!--<div class="div1">HTTP.POST can be used when the client is sending data to the server and the server will decide the URI for the newly created resource.-->
+    <!--"The POST method is used to request that the origin server accept the entity enclosed in the request as a new subordinate of the resource identified by the Request-URI in the Request-Line."-->
+    <!--this is what most of us think of when we talk about "creating data" on a web server. </div>-->
+
+<!--<div class="container">-->
+    <!--<div><img src="images/1.jpg">-->
+    <!--<p>add name here</p>-->
+    <!--</div>-->
+
+    <!--<div><img src="images/2.jpg"></div>-->
+    <!--<div><img src="images/3.jpg"></div>-->
+    <!--<div><img src="images/4.jpg"></div>-->
+    <!--<div><img src="images/5.jpg"></div>-->
+    <!--<div><img src="images/6.jpg"></div>-->
+    <!--<div><img src="images/7.jpg"></div>-->
+    <!--<div><img src="images/8.jpg"></div>-->
+    <!--<div><img src="images/9.jpg"></div>-->
+    <!--<div><img src="images/1.jpg"></div>-->
+    <!--<div><img src="images/2.jpg"></div>-->
+    <!--<div><img src="images/3.jpg"></div>-->
+    <!--<div><img src="images/4.jpg"></div>-->
+    <!--<div><img src="images/5.jpg"></div>-->
+    <!--<div><img src="images/6.jpg"></div>-->
+    <!--<div><img src="images/7.jpg"></div>-->
+    <!--<div><img src="images/8.jpg"></div>-->
+    <!--<div><img src="images/9.jpg"></div>-->
+
+
+
+<!--</div>-->
+<!--<h1>Hello World</h1>-->
+
+<div class="heading"></div>
+
+<div class="content">
+    <div class="middle">
+        <div class="inner">This is middle.</div>
+    </div>
+    <div class="left">
+        This is left.
+    </div>
+    <div class="right">
+        This is right.
+    </div>
+
+</div>
+<div class="footing"></div>
+<!--<div id="header">Hello Less&#45;&#45;Header</div>-->
+<!--<div class="rounded-corners">Hello Less&#45;&#45;Header</div>-->
+<!--<div id="footer">Hello Less&#45;&#45;footer</div>-->
+<!--<div class="container">-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+    <!--<div class="image">-->
+        <!--<a href="#" target="_self">-->
+            <!--<img src="images/ski.jpg" alt="pop start" width="200px" height="200px">-->
+        <!--</a>-->
+        <!--<div class="text">This is a pop star: JinTaiXi</div>-->
+    <!--</div>-->
+
+<!--</div>-->
+
+<!--<body marginwidth="0px" marginheight="0px">-->
+<!--<table width="100%" height="950px" style="background-color: darkgray">-->
+    <!--<tr>-->
+        <!--<td colspan="2" width="100%" height="10%" style="background-color: aqua">heading</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td width="30%" height="80%" style="background-color: darkorange">Manu-->
+        <!--</td>-->
+        <!--<td width="70%" height="80%" style="background-color: aquamarine">Body</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td colspan="2" width="100%" height="10%" style="background-color:darkgray">footer</td>-->
+    <!--</tr>-->
+
+<!--</table>-->
+<!--<form action="http://localhost/MySerivce/Service.php" method="post">-->
+    <!--name:-->
+    <!--<input type="text" name="name"><br/>-->
+    <!--password:-->
+    <!--<input type="password" name="password"><br/>-->
+<!--what's your favorite fruit?-->
+<!--<br/>-->
+<!--apple-->
+    <!--<input type="checkbox">-->
+<!--banana-->
+<!--<input type="checkbox">-->
+<!--tomato-->
+<!--<input type="checkbox">-->
+    <!--<br/>-->
+    <!--Your sex:-->
+    <!--Male <input type="radio" name="sex">-->
+    <!--Female <input type="radio" name="sex">-->
+    <!--<br/>-->
+    <!--Select your website:-->
+    <!--<select>-->
+        <!--<option>www.baidu.com</option>-->
+        <!--<option>www.google.com</option>-->
+        <!--<option>www.redigital.com</option>-->
+    <!--</select>-->
+    <!--<br/>-->
+    <!--<input type="button" value="Button">-->
+    <!--<br/>-->
+    <!--<input type="submit" value="Submit">-->
+<!--</form>-->
+<!--<textarea cols="30" rows="30">pls type something here. </textarea>-->
+<!--&lt;!&ndash;< bgcolor="#fff8dc">&ndash;&gt;-->
+    <!--<h1 align="center">H1</h1>-->
+    <!--<h2>H2</h2>-->
+    <!--<h3>H3</h3>-->
+    <!--<h4>H4</h4>-->
+    <!--<h5>H5</h5>-->
+    <!--<h6>H6</h6>-->
+<!--<p>Hello</p>-->
+<!--<a href="http://meetup.com" target="_self" style="color: #6e3fff;">meetup</a><br />-->
+<!--<a href="http://meetup.com">-->
+    <!--<img src="images/ski.jpg" width="100px" height="100px", alt="Ski">-->
+<!--</a>-->
+<!--<br />-->
+<!--&lt;!&ndash;img src="images/ski.jpg"&ndash;&gt;-->
+<!--<table border="10" cellpadding="10" background="images/ski.jpg">-->
+    <!--<caption>MyTable</caption>-->
+    <!--<tr>-->
+        <!--<th>-->
+            <!--Head1-->
+        <!--</th>-->
+        <!--<th>-->
+            <!--Head2-->
+        <!--</th>-->
+        <!--<th>-->
+            <!--Head3-->
+        <!--</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>-->
+            <!--<ul type="squre">-->
+                <!--<li>apple</li>-->
+                <!--<li>pear</li>-->
+                <!--<li>lemon</li>-->
+            <!--</ul>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<ol type="A" start="3">-->
+                <!--<li>apple </li>-->
+                    <!--<ul type="squre">-->
+                        <!--<ui>-->
+                            <!--cheap-->
+                        <!--</ui>-->
+                        <!--<ui>expensive</ui>-->
+                    <!--</ul>-->
+                <!--<li>pear</li>-->
+                <!--<li>lemon</li>-->
+            <!--</ol>-->
+        <!--</td>-->
+        <!--<td>cell3</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>cell1</td>-->
+        <!--<td>cell2</td>-->
+        <!--<td>cell3</td>-->
+    <!--</tr>-->
+<!--</table>-->
+
+<!--<table border="10" cellspacing="10" bgcolor="#7fff00">-->
+    <!--<caption>MyTable</caption>-->
+    <!--<tr>-->
+        <!--<th>-->
+            <!--Head1-->
+        <!--</th>-->
+        <!--<th>-->
+            <!--Head2-->
+        <!--</th>-->
+        <!--<th>-->
+            <!--Head3-->
+        <!--</th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>-->
+            <!--<ul>-->
+                <!--<li>apple</li>-->
+                <!--<li>pear</li>-->
+                <!--<li>lemon</li>-->
+            <!--</ul>-->
+        <!--</td>-->
+        <!--<td>cell2</td>-->
+        <!--<td>cell3</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>cell1</td>-->
+        <!--<td>cell2</td>-->
+        <!--<td>cell3</td>-->
+    <!--</tr>-->
+<!--</table>-->
+
+<!--<dl>-->
+    <!--<dt>I am Min</dt>-->
+    <!--<dd>I love cooking</dd>-->
+    <!--<dt>I am Judy</dt>-->
+    <!--<dd>I love coding</dd>-->
+<!--</dl>-->
+<!--<a name="tips">tips</a>-->
+<!--<br/>-->
+<!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+<!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+<!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+<!--<a href="#tips">jump to tips</a>-->
+
+<!--<div id="divid1">-->
+    <!--<p>This is from div. </p>-->
+    <!--<a>click on me. </a>-->
+<!--</div>-->
+
+<!--<div id ="divid2">-->
+    <!--<p><span>THis is inside span</span> and then outof span. </p>-->
+<!--</div>-->
+
+<!--<div id="container">-->
+    <!--<div id="heading">Header</div>-->
+    <!--<div id="content_menu">Content_Menue</div>-->
+    <!--<div id="content_body">Content_Body</div>-->
+    <!--<div id="footing">Footer</div>-->
+<!--</div>-->
+
+<!--<b>Hello, my first class</b><br />-->
+<!--<big>Hello, my first class</big><br />-->
+<!--<em>Hello, my first class</em><br />-->
+<!--<i>Hello, my first class</i><br />-->
+<!--<small>Hello, my first class</small><br />-->
+
+<!--<strong>Hello, my first class</strong><br />-->
+<!--Sub<sub>Hello, my first class</sub>Sub<br />-->
+<!--Sup<sup>Hello, my first class</sup>Sup<br />-->
+<!--<ins>Hello, my first class</ins><br />-->
+<!--<del>Hello, my first class</del><br />-->
+
+
+
+<!--<frameset rows="20%, 30%, 50%">-->
+    <!--<frame src="framea.html"></frame>-->
+    <!--<frame src="frameb.html"></frame>-->
+    <!--<frame src="framec.html"></frame>-->
+<!--</frameset>-->
+<!--<a href="www.google.com" target="_blank">Click on me</a>-->
+<!--<br/>-->
+<!--<iframe src="framec.html" frameborder="0" width="800px" height="800px"></iframe>-->
+<!--<body>-->
+<!--<a href="www.google.com">This is a link. </a>-->
+<!--<h4 title="t">This is blue</h4>-->
+<!--<p id="p1" title="te">this is black</p>-->
+<!--<p id="p2" title="te">This IS blackThis IS blackThis IS blackThis IS blackThis IS blackThis IS blackThis IS black</p>-->
+<!--<p id="p3" title="te">This is Black</p>-->
+<!--<p title="te">This is black</p>-->
+<!--<p title="te">This is black</p>-->
+<!--<p title="te">This is black</p>-->
+<!--<p title="te">This is black</p><p title="te">This is black</p><p title="te">This is black</p>-->
+
+
+
+<!--&lt;!&ndash;abc&lt;html&gt;&ndash;&gt;-->
+<!--<p class="pclass">This is paragraph. <a>This is a link inside. </a></p>-->
+<!--<p><strong>Hello CSS</strong></p>-->
+<!--<ul>-->
+    <!--<li><strong>From li. </strong></li>-->
+<!--</ul>-->
+<!--<ul class="ul1">-->
+    <!--<li>apple</li>-->
+    <!--<li>pear</li>-->
+    <!--<li>banana</li>-->
+<!--</ul>-->
+<!--<ul class="ul2">-->
+    <!--<li>apple</li>-->
+    <!--<li>pear</li>-->
+    <!--<li>banana</li>-->
+<!--</ul>-->
+<!--<table id="tb">-->
+    <!--<tr>-->
+        <!--<th>Name</th>-->
+        <!--<th>Sex</th>-->
+        <!--<th>Age</th>-->
+    <!--</tr>-->
+    <!--<tr class="alt">-->
+        <!--<td>James</td>-->
+        <!--<td>Male</td>-->
+        <!--<td>23</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>James</td>-->
+        <!--<td>Male</td>-->
+        <!--<td>23</td>-->
+    <!--</tr>-->
+    <!--<tr class="alt">-->
+        <!--<td>James</td>-->
+        <!--<td>Male</td>-->
+        <!--<td>23</td>-->
+    <!--</tr>-->
+<!--</table>-->
+<!--<p>This is for outline.</p>-->
+<!--<table border="1">-->
+<!--<tr>-->
+    <!--<td>padding</td>-->
+<!--</tr>-->
+<!--</table>-->
+<!--<p>This is border.</p>-->
+<!--<div class="container">-->
+    <!--<div class="bd">-->
+        <!--<div class="pd">-->
+            <!--<div class="content">Hello</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="container1">-->
+    <!--<div class="bd1">-->
+        <!--<div class="pd1">-->
+        <!--<div class="content1">Hello</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+</html>

@@ -1,0 +1,91 @@
+1. Explain the difference between inheritance and composition, and when/why one is preferable over the other
+Inheritance is an "is-a" relationship. A class can inherit(use by default)the variables and methods of its superclass. 
+Or override some methods to alter the default behavior. 
+Composition is a "has-a": A class holds a reference to another object to provide some or all of its functionality. 
+
+We prefer composition over inheritence when the objects consists of another or has some relationship to them. 
+Composition is preferable in terms of maintainance, flexibility and simplicity. 
+It is less likely to break anything just because we made an isolated change anywhere in the code. 
+Composition allows reuse of code without extending the class but for inheritence we must extend the class for any reuse 
+of code. and composition also allows us to reuse code from many classes but with inheritence we can reuse code from just 
+one class(not supported in ruby. )
+Also having a very shallow inheritance tree makes it much easier to keep the overview even when the project starts to get 
+really large. 
+ 
+
+2. Explain Dependency Injection. Have you used it? Do you see any disadvantages?
+Dependency Injection can be understood as providing the object its instance variables instead of constructing them itself. 
+Yes, I've used the constructor dependency injection. 
+It's a very useful technique for testing, since it allows dependencies to be mocked or stubbed out. 
+The dependent code is dependent on data, and that data is injected in by the means of passing the parameter. 
+If it's used in this form, the bad thing is about the interface which is hard to understand and maitain. 
+Everyone who reads the code, has to look up what the dependencies are, how they are specified, and what they mean, 
+and work out what to do for their application.
+
+ 
+3. Describe 2 - 3 design patterns that you are familiar with, and why you chose to use them.
+
+Recently, I used the Observer Pattern to implement an new feature in rails, like generating some reports based on some changes 
+to a model, like a order being saved. We usualy can add such functions in callballs, but it would make models fat with too much 
+logic there and reports are not so relavant to the models. I prefer using Observer pattern to solve it and they can be easily 
+changed or removed without effecting the models. 
+At the same time, If we wanted to watch for changes across several models, then a single observer could handle that. 
+The last point is it's easy to achive this, just by defining and registering our own Observer which inherts from the 
+ActiveRecord::Observer
+
+Another one that I've used(also in C++) a lot is proxy pattern which can be used to control access to an object(how, when, 
+how much part of the object) or implement remote prcedure calls(just used in our function by getting DPID barcode result from 
+remote server.). 
+Proxy doesn't change the interface, sometimes we use it by wrapping up the legacy objects during refactoring.
+We usually combine the ruby tricks like method_missing and dynamically dispatch(send) to reduce the 
+code repeatition of building proxies.
+ 
+
+4. Explain how the SOLID principles of software design relate to Rails development.
+1. I think we follow the first principe most of the time in any Object-Oriented languages, not limited in rails development. 
+In practice, classes grow. We add some operations here, a bit of data there. 
+We add a responsibility to a class feeling that it's not worth a separate class, 
+but as that responsibility grows and breeds, the class becomes too complicated. 
+We usually refactor it by extracting classes, splitting the responsibilities of the classes. 
+We adhere to this rule when we define controller or model classes.
+
+2. About open/close principle, It's easy to follow the open princiople becuase ruby classes are all open for extensions. and There 
+are so many ways to extend a class including reopening a class like monkeypatching(but it's not encouraged in the project. This is also 
+about the close principle. we are not supposed to modify or add new behaviors of the class. Sometimes we can warn people or prevent this 
+by using the hook method as the entry when a new method is added.) We use Mixin a lot to extend a class in rails by mixing a module into 
+a class. We can easily add new features or functions in a module which can also be reused somewhere else. In Rails we use 'concerns' folder 
+to organize those modules like authentication. 
+
+3. I feel the LSP(Liskov principle) works differently in Ruby comparing to C++ where type safty is enforced by compiler. In Ruby we are 
+concered with what messages that object responds to. And then this rule is mapped to ruby way of thinking: we still have to know the 
+behavior/context for everything in the ancestry chain and make sure the behavior we are implementing will not interface with the internal 
+operations of the ancestors before we think about inheritance or mixin. 
+So this is also a rule to guide us when we choose inheritence or composition pattern or mixin in the real development.
+
+4. I understand the Interface segregation principle as we have to define only what we need or expose only those interfaces customers need. 
+We usually follow it by using the proxy pattern to control the access to the real object(or use the Forwardable module). 
+
+5. We ususally use dependency injection pattern to decouple with dependencies. In Ruby, it's related to duck typing.
+Even if the name of the class appears in the code, it certainly does not mean we are bound to it.(it can be a default value.) 
+It implicitly means that we are no longer programming to an implementation but to an 'interface', or a contract or 
+a procotol or whatever we want to call it.  
+
+5. When would you consider refactoring a method?
+
+At the beginning, I would mainly focus on how to achieve the function and make it pass the unit test. After that, 
+When I am doing code review myself or by team members, I will refactor the code in terms of making the code cleaner 
+or more efficient . 
+In addition, When I add new features or fix bugs, I will do refactoring. They are all signs to remind me to refactor the code. 
+
+
+6. What was the last IT related book you read? Why did you read it and what did you learn from it?
+
+I am reading the 'Pattern Design in Ruby' recently. I wanna give myself refresher of the typical Design Patterns spoken about by GoF. 
+Spotting patterns is not always easy and it helps me to improve my awareness. It reminds/reconfirms me how to look at my applications, 
+and when and where patterns could best be applied. Reading it also gives me a desire to instantly start researching, practicing, and applying 
+what I have learned. 
+
+Sometimes a book gives me the glasses with which to look through as I assess my code but I found learning the rails/or other good gems source code 
+is a better/more practical way to improve.  
+
+

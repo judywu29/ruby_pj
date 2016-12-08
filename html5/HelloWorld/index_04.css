@@ -1,0 +1,133 @@
+
+*{
+    padding:0px;
+    magin: 0px;
+    list-style: none;
+}
+li{
+    float: left;
+    background-color: lightsalmon;
+    paddling: 5px;
+    color: white;
+    margin-right: 2px;
+    border: 1px solid red;
+
+}
+.tablein{
+    background-color: chocolate;
+    border: 1px solid chocolate;
+}
+.first{
+    clear: both;
+    background-color: chocolate;
+    color: white;
+    width: 300px;
+    height: 100px;
+    display: none;
+    padding: 10px;
+}
+.content{
+    display: block;
+}
+
+#table2{
+    float: left;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+#table2 li.tablein{
+    background-color: antiquewhite;
+    border: 1px solid aquamarine;
+    border-bottom: 0;
+    z-index: 100;
+    position: relative;
+}
+#content2{
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    background-color: antiquewhite;
+    clear: left;
+    border: 1px solid aquamarine;
+    top: -2px;
+    postition: relative;
+}
+/*.box{*/
+    /*position: relative;*/
+    /*float: left;*/
+/*}*/
+/*.content{*/
+    /*padding: 10px;*/
+    /*border: 1px solid gray;*/
+    /*box-shadow: 0 0 5px gray;*/
+    /*border-radius: 5px;*/
+/*}*/
+/*.content img{*/
+    /*width: 190px;*/
+    /*height: auto;*/
+/*}*/
+/*.bd *{*/
+    /*display: block;*/
+    /*border: 3px solid fuchsia;*/
+    /*color: fuchsia;*/
+    /*margin: 15px;*/
+    /*padding: 5px;*/
+/*}*/
+
+/**{*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+
+/*}*/
+
+/*#container{*/
+    /*position: relative;*/
+
+/*}*/
+/*.box{*/
+    /*padding: 5px;*/
+    /*float: left;*/
+/*}*/
+/*.image{*/
+    /*padding: 5px;*/
+    /*border: 1px solid gray;*/
+    /*box-shadow: 0 0 5px gray;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+/*.image img{*/
+    /*width: 200px;*/
+    /*height: auto;*/
+/*}*/
+/*.style1{*/
+    /*width:100px;*/
+    /*height: 100px;*/
+    /*background-color: chocolate;*/
+/*}*/
+/*.style2{*/
+    /*background-color: antiquewhite;*/
+/*}*/
+#div1{
+    width:500px;
+    height: 200px;
+    border: 3px solid darkred;
+    background-color: antiquewhite;
+}
+#div2{
+    width: 400px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 3px solid aqua;
+
+}
+p{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 150px;
+    height: 80px;
+    border: 3px solid fuchsia;
+}

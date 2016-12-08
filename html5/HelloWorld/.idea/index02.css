@@ -1,0 +1,101 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: cursive;
+}
+body{
+    background-color: antiquewhite;
+}
+.wrap{
+    width: 80%;
+    height: 1000px;
+    background-color: aliceblue;
+    margin: 0px auto;
+}
+.heading{
+    margin:0px auto;
+    width: 100%;
+    height: 90px;
+    background-color: antiquewhite;
+
+}
+ul{
+    margin-left: 40px;
+    float: left;
+    list-style-type: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    /*font-family: cursive;*/
+
+}
+li{
+    padding-left: 30px;/*相互之间间距*/
+    display: inline;/*horizontal*/
+}
+a:link, a:visited{
+    font-weight: bold;
+    color:lightsalmon;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+a:hover, a:active{
+    color: darkred;
+
+}
+
+.title{
+    float: left;
+    /*font-family: cursive;*/
+    font-size: 30px;
+    color: sienna;
+}
+
+.heading_nav{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.heading_img img{
+    border-radius:30px;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    float:right;
+}
+.heading_spotlight form{
+    float: right;
+    width: 100px;
+    position: relative;
+    margin-right: 70px;
+    padding-top: 15px ;
+}
+form input{
+    height: 30px;
+    border-radius: 30px;
+}
+.body{
+    padding: 30px;
+    height: auto;
+    width: auto;
+}
+.body_title h3{
+    font-size: 30px;
+    color: chocolate;
+
+}
+.body_title p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footing{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color:darkred;
+
+}
